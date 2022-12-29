@@ -22,7 +22,6 @@ app.get("/", (req, res) =>{
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URL=process.env.MONGO_URL;
-console.log(MONGO_URL);
 mongoose.set("strictQuery", false);
 mongoose.connect(MONGO_URL)
 .then(()=>{
