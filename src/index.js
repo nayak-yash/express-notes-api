@@ -22,7 +22,7 @@ app.get("/", (req, res) =>{
 
 const PORT = process.env.PORT || 5000;
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://yash:yashn12345@cluster0.irqro0i.mongodb.net/notes_db?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     app.listen(PORT, ()=>{
         console.log("Server started on port no. " + PORT);
